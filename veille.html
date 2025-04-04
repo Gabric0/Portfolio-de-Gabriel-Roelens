@@ -90,388 +90,184 @@
     </header>
     <!-- end header section -->
   </div>
-     <!-- Titre -->
-     <section class="definition_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>
-            La Virtualisation
-          </h2>
-        </div>
-      </div>
-     </section>
-    <!-- définition section -->
-    <section class="definition_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>
-            Définition
-          </h2>
-        </div>
-        <div class="definition_container">
-          <p>
-            La virtualisation est une technologie qui permet de créer des environnements virtuels isolés sur une même infrastructure physique. Elle permet d’exécuter plusieurs systèmes d’exploitation, applications ou fonctions réseau sur un seul serveur ou dans un réseau.
-          </p>
-          <p>
-            Elle concerne principalement deux domaines :
-          </p>
-          <ul>
-            <li>
-              Virtualisation des serveurs : Création de machines virtuelles (VM) pour optimiser l’utilisation des ressources physiques. 
-              Exemple : La consolidation de serveurs via VMware vSphere permet à une entreprise de réduire le nombre d’unités physiques nécessaires.
-            </li>
-            <li>
-              Virtualisation du réseau : Abstraction des fonctions réseau (NFV, SDN, VLAN) pour améliorer la gestion, la flexibilité et la sécurité.
-              Précision : Des articles sur Red Hat expliquent comment le SDN permet une gestion centralisée, tandis que NFV transforme des fonctions matérielles en services logiciels (voir RedHat - Virtualisation des réseaux).
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- end définition section -->
-    
-    <!-- utilisations section -->
-    <section class="utilisations_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>
-            Utilisations
-          </h2>
-        </div>
-        <div class="utilisations_container">
-          <p>
-            Les principaux usages de la virtualisation dans les réseaux et centres de données incluent :
-          </p>
-          <ul>
-            <li>
-              Consolidation des serveurs : Regrouper plusieurs VM sur un même hôte physique réduit les coûts en matériel, énergie et maintenance. 
-              Exemple : Une entreprise qui utilise Hyper-V pour consolider ses serveurs a pu réaliser des économies importantes sur l’énergie et l’espace en data center.
-            </li>
-            <li>
-              Isolation et sécurité : Chaque environnement virtuel est isolé, limitant la propagation des erreurs ou attaques. 
-              Précision : L’isolation permet aussi de tester de nouvelles applications sans impacter les systèmes de production, comme expliqué dans plusieurs guides techniques (par exemple sur IT-Connect).
-            </li>
-            <li>
-              Flexibilité et agilité : Déploiement, migration et réplication rapides des environnements selon les besoins. 
-              Exemple : La migration à chaud de VM via VMware vSphere ou KVM permet de déplacer des charges de travail sans interruption de service, ce qui est souvent détaillé dans la documentation Microsoft Hyper-V.
-            </li>
-            <li>
-              Optimisation des ressources : Allocation dynamique de la puissance de calcul, de la mémoire et du stockage. 
-              Précision : Les environnements virtualisés peuvent être ajustés en temps réel pour répondre aux variations de charge, un avantage mis en avant dans des études Gartner.
-            </li>
-            <li>
-              Virtualisation des fonctions réseau (NFV/SDN) : Abstraction des fonctions réseau (pare-feu, VPN, équilibrage de charge) pour une gestion centralisée et une meilleure adaptation aux besoins. 
-              Exemple : Le déploiement d’un firewall virtuel via NFV permet d’adapter la sécurité réseau en fonction des pics de trafic sans changer de matériel.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- end utilisations section -->
-    
-    <!-- technologies de virtualisation section -->
-    <section class="technologies_virtualisation_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>
-            Technologies de Virtualisation
-          </h2>
-        </div>
-        <div class="technologies_virtualisation_container">
-          <p>
-            Virtualisation des serveurs
-          </p>
-          <p>
-            Les hyperviseurs, ou Virtual Machine Monitors, sont au cœur de cette technologie :
-          </p>
-          <ul>
-            <li>
-              Type 1 (bare-metal) : VMware vSphere, Microsoft Hyper‑V, KVM s’installent directement sur le matériel pour offrir de meilleures performances. 
-              Exemple : Des centres de données utilisent KVM pour sa robustesse et son intégration avec Linux, comme détaillé dans divers articles spécialisés.
-            </li>
-            <li>
-              Type 2 (hébergés) : VirtualBox, VMware Workstation fonctionnent au-dessus d’un OS hôte et sont souvent utilisés pour des environnements de test ou personnels. 
-              Lien utile : La documentation Oracle VM VirtualBox fournit de nombreux exemples d’implémentations pour des usages variés (voir VirtualBox sur Wikipedia).
-            </li>
-          </ul>
-          <p>
-            Fonctionnement des Machines Virtuelles
-          </p>
-          <ul>
-            <li>
-              Simulation des ressources : L’hyperviseur attribue à chaque VM une portion des ressources physiques (CPU, mémoire, stockage, interfaces réseau).
-            </li>
-            <li>
-              Isolation et sécurité : Une faille ou un problème dans une VM n’affecte pas les autres, assurant ainsi une meilleure robustesse du système global.
-            </li>
-            <li>
-              Fonctionnalités avancées : La migration à chaud, les snapshots et la réplication garantissent une continuité de service même en cas de défaillance. 
-              Précision : Ces aspects sont cruciaux dans des environnements de production critiques et sont souvent mentionnés dans les comparatifs d’hyperviseurs publiés par TechTarget.
-            </li>
-          </ul>
-          <p>
-            Virtualisation du réseau
-          </p>
-          <p>
-            Elle transforme un réseau matériel en une infrastructure flexible et centralisée grâce à :
-          </p>
-          <ul>
-            <li>
-              NFV (Network Function Virtualization) : Virtualisation des fonctions réseau (routeurs, pare-feu, équilibreurs de charge) pour réduire la dépendance aux équipements physiques. 
-              Exemple : Plusieurs fournisseurs de services utilisent NFV pour migrer de systèmes propriétaires vers des solutions logicielles, comme expliqué dans des articles de 2ICS.net.
-            </li>
-            <li>
-              SDN (Software-Defined Networking) : Séparation des plans de contrôle et de données pour une gestion programmable du réseau. 
-              Lien utile : Des guides sur SDN montrent comment cette technologie permet de centraliser la configuration réseau pour une meilleure agilité.
-            </li>
-            <li>
-              VLANs (Virtual Local Area Networks) : Segmentation logique d’un réseau physique en plusieurs réseaux isolés.
-            </li>
-          </ul>
-          <p>
-            VLANs (Virtual Local Area Networks)
-          </p>
-          <ul>
-            <li>
-              Isolation du trafic : Chaque VLAN constitue un domaine de diffusion distinct, limitant la surcharge réseau.
-            </li>
-            <li>
-              Flexibilité : Permet de séparer différents types de trafic (données, voix, vidéo) ou d’isoler des services sensibles.
-            </li>
-            <li>
-              Gestion centralisée : La topologie réseau peut être modifiée dynamiquement, un avantage souvent évoqué sur des sites spécialisés comme Red Hat.
-            </li>
-          </ul>
-          <p>
-            VPNs (Virtual Private Networks)
-          </p>
-          <ul>
-            <li>
-              Tunnel sécurisé : Les données sont encapsulées et chiffrées via des protocoles (IPsec, SSL/TLS, OpenVPN).
-            </li>
-            <li>
-              Accès distant et interconnexion : Ils permettent aux employés d’accéder aux ressources internes et connectent des sites distants, ce qui est particulièrement utile pour les entreprises multinationales.
-            </li>
-            <li>
-              Authentification renforcée : L’utilisation de certificats ou de l’authentification multi-facteurs assure que seules les personnes autorisées accèdent au réseau. 
-              Exemple : Des solutions VPN sont souvent comparées dans des articles d’IT-Connect pour démontrer leur efficacité en milieu professionnel.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- end technologies de virtualisation section -->
-    
-    <!-- nouvelles technologies section -->
-    <section class="nouvelles_technologies_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>
-            Nouvelles Technologies
-          </h2>
-        </div>
-        <div class="nouvelles_technologies_container">
-          <ul>
-            <li>
-              Virtualisation des conteneurs (Docker, Kubernetes) : Environnements légers pour déployer rapidement des applications de façon isolée. 
-              Précision : Ces technologies sont au cœur du mouvement DevOps et de l’automatisation, comme en témoignent de nombreux tutoriels sur Kubernetes.
-            </li>
-            <li>
-              Virtualisation GPU : Partage ou attribution directe de GPU aux VM pour améliorer les traitements graphiques et les applications d’IA. 
-              Exemple : Des fournisseurs cloud proposent désormais des instances GPU virtualisées pour le machine learning, comme détaillé dans le blog de Red Hat.
-            </li>
-            <li>
-              Intégration de l’IA et de l’automatisation : Outils d’analyse prédictive et assistants d’administration optimisent la gestion des environnements virtualisés.
-            </li>
-            <li>
-              Virtualisation pour l’edge computing : Déploiement d’environnements virtualisés proches des utilisateurs pour réduire la latence, un atout pour les applications IoT.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- end nouvelles technologies section -->
-    
-    <!-- avantages et inconvénients section -->
-    <section class="avantages_inconvenients_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>
-            Avantages et Inconvénients de la Virtualisation
-          </h2>
-        </div>
-        <div class="avantages_inconvenients_container">
-          <p>
-            Avantages
-          </p>
-          <ul>
-            <li>
-              Optimisation des ressources : Consolidation des charges de travail sur moins de serveurs permet une meilleure utilisation du matériel. 
-              Exemple : Des études Gartner montrent que la virtualisation peut réduire le nombre de serveurs physiques jusqu’à 50 %.
-            </li>
-            <li>
-              Réduction des coûts : Moins d’investissement en matériel, économies sur l’énergie et la maintenance.
-            </li>
-            <li>
-              Flexibilité et rapidité : Déploiement et migration instantanés des environnements virtuels, facilitant ainsi les évolutions et tests.
-            </li>
-            <li>
-              Isolation et sécurité : La séparation des environnements limite les impacts en cas de panne ou d’attaque.
-            </li>
-            <li>
-              Scalabilité : Les ressources peuvent être allouées dynamiquement en fonction de la demande.
-            </li>
-          </ul>
-          <p>
-            Inconvénients
-          </p>
-          <ul>
-            <li>
-              Overhead de virtualisation : Une légère baisse des performances comparée à une exécution native peut survenir.
-            </li>
-            <li>
-              Complexité de gestion : Nécessité d’outils spécialisés et de compétences avancées pour maintenir l’infrastructure.
-            </li>
-            <li>
-              Dépendance à l’hyperviseur : Une faille dans l’hyperviseur peut impacter toutes les VM hébergées.
-            </li>
-            <li>
-              Risque de surallocation : Une mauvaise gestion des ressources peut entraîner une concurrence interne et dégrader les performances.
-            </li>
-            <li>
-              Vulnérabilités réseau : Une configuration inadéquate (par exemple dans les VLANs ou VPNs) peut créer des failles de sécurité.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- end avantages et inconvénients section -->
-    
-    <!-- conclusion section -->
-    <section class="conclusion_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>
-            Conclusion
-          </h2>
-        </div>
-        <div class="conclusion_container">
-          <p>
-            La virtualisation révolutionne la gestion des infrastructures IT en optimisant l’utilisation des ressources et en réduisant les coûts. Elle offre une grande flexibilité, une isolation efficace et une meilleure gestion des fonctions réseau. Cependant, son implémentation demande une surveillance continue et une expertise pour surmonter les défis liés à l’overhead, à la complexité de gestion et aux risques potentiels en cas de mauvaise configuration. Des ressources complémentaires et guides, tels que ceux proposés par Red Hat ou IT-Connect, peuvent aider à approfondir ces concepts et à suivre les innovations du secteur.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- end conclusion section -->
 
-  <!-- info section -->
-
-  <section class="info_section layout_padding2">
+  <!-- Titre -->
+  <section class="definition_section layout_padding">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_contact">
-            <h4>
-              Address
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  5 rue des Bonnards - 80000 Amiens - France
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  07 80 57 14 76
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  roelens.gabriel@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="info_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto info_col">
-          <div class="info_link_box">
-            <h4>
-              Liens
-            </h4>
-            <div class="info_links">
-              <a class="active" href="index.html">
-                Accueil
-              </a>
-              <a class="" href="apropos.html">
-                A propos de moi
-              </a>
-              <a class="" href="projets.html">
-                Projets
-              </a>
-              <a class="" href="stage.html">
-                Stages
-              </a>
-              <a class="" href="cv.html">
-                Mon CV
-              </a>
-              <a class="" href="veille.html">
-                Veille
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="heading_container heading_center">
+        <h2>
+          La Virtualisation
+        </h2>
       </div>
     </div>
   </section>
 
-  <!-- end info section -->
+  <!-- définition section -->
+  <section class="definition_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Définition
+        </h2>
+      </div>
+      <div class="definition_container">
+        <p>
+          La virtualisation est une technologie qui permet de créer des environnements virtuels isolés sur une même infrastructure physique. Elle permet d’exécuter plusieurs systèmes d’exploitation, applications ou fonctions réseau sur un seul serveur ou dans un réseau.
+        </p>
+        <p>
+          Elle concerne principalement deux domaines :
+        </p>
+        <ul>
+          <li>
+            Virtualisation des serveurs : Création de machines virtuelles (VM) pour optimiser l’utilisation des ressources physiques. 
+            Exemple : La consolidation de serveurs via VMware vSphere permet à une entreprise de réduire le nombre d’unités physiques nécessaires.
+          </li>
+          <li>
+            Virtualisation du réseau : Abstraction des fonctions réseau (NFV, SDN, VLAN) pour améliorer la gestion, la flexibilité et la sécurité.
+            Précision : Des articles sur <a href="https://www.redhat.com/fr/topics/virtualization/what-is-network-virtualization" target="_blank">Red Hat</a> expliquent comment le SDN permet une gestion centralisée, tandis que NFV transforme des fonctions matérielles en services logiciels (voir <a href="https://www.redhat.com/fr/topics/virtualization/what-is-network-virtualization" target="_blank">RedHat - Virtualisation des réseaux</a>).
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
+  <!-- utilisations section -->
+  <section class="utilisations_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Utilisations
+        </h2>
+      </div>
+      <div class="utilisations_container">
+        <p>
+          Les principaux usages de la virtualisation dans les réseaux et centres de données incluent :
+        </p>
+        <ul>
+          <li>
+            Consolidation des serveurs : Regrouper plusieurs VM sur un même hôte physique réduit les coûts en matériel, énergie et maintenance. 
+            Exemple : Une entreprise qui utilise Hyper-V pour consolider ses serveurs a pu réaliser des économies importantes sur l’énergie et l’espace en data center.
+          </li>
+          <li>
+            Isolation et sécurité : Chaque environnement virtuel est isolé, limitant la propagation des erreurs ou attaques. 
+            Précision : L’isolation permet aussi de tester de nouvelles applications sans impacter les systèmes de production, comme expliqué dans plusieurs guides techniques (par exemple sur <a href="https://www.it-connect.fr/mise-en-place-de-vlans-et-de-routage-inter-vlans/" target="_blank">IT-Connect</a>).
+          </li>
+          <li>
+            Flexibilité et agilité : Déploiement, migration et réplication rapides des environnements selon les besoins. 
+            Exemple : La migration à chaud de VM via VMware vSphere ou KVM permet de déplacer des charges de travail sans interruption de service, ce qui est souvent détaillé dans la documentation Microsoft Hyper-V.
+          </li>
+          <li>
+            Optimisation des ressources : Allocation dynamique de la puissance de calcul, de la mémoire et du stockage. 
+            Précision : Les environnements virtualisés peuvent être ajustés en temps réel pour répondre aux variations de charge, un avantage mis en avant dans des études Gartner.
+          </li>
+          <li>
+            Virtualisation des fonctions réseau (NFV/SDN) : Abstraction des fonctions réseau (pare-feu, VPN, équilibrage de charge) pour une gestion centralisée et une meilleure adaptation aux besoins. 
+            Exemple : Le déploiement d’un firewall virtuel via NFV permet d’adapter la sécurité réseau en fonction des pics de trafic sans changer de matériel.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- technologies de virtualisation section -->
+  <section class="technologies_virtualisation_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Technologies de Virtualisation
+        </h2>
+      </div>
+      <div class="technologies_virtualisation_container">
+        <p>
+          Virtualisation des serveurs
+        </p>
+        <p>
+          Les hyperviseurs, ou Virtual Machine Monitors, sont au cœur de cette technologie :
+        </p>
+        <ul>
+          <li>
+            Type 1 (bare-metal) : VMware vSphere, Microsoft Hyper‑V, KVM s’installent directement sur le matériel pour offrir de meilleures performances. 
+            Exemple : Des centres de données utilisent KVM pour sa robustesse et son intégration avec Linux, comme détaillé dans divers articles spécialisés.
+          </li>
+          <li>
+            Type 2 (hébergés) : VirtualBox, VMware Workstation fonctionnent au-dessus d’un OS hôte et sont souvent utilisés pour des environnements de test ou personnels. 
+            Lien utile : La documentation <a href="https://fr.wikipedia.org/wiki/Oracle_VM_VirtualBox" target="_blank">Oracle VM VirtualBox</a> fournit de nombreux exemples d’implémentations pour des usages variés (voir <a href="https://fr.wikipedia.org/wiki/Oracle_VM_VirtualBox" target="_blank">VirtualBox sur Wikipedia</a>).
+          </li>
+        </ul>
+        <p>
+          Fonctionnement des Machines Virtuelles
+        </p>
+        <ul>
+          <li>
+            Simulation des ressources : L’hyperviseur attribue à chaque VM une portion des ressources physiques (CPU, mémoire, stockage, interfaces réseau).
+          </li>
+          <li>
+            Isolation et sécurité : Une faille ou un problème dans une VM n’affecte pas les autres, assurant ainsi une meilleure robustesse du système global.
+          </li>
+          <li>
+            Fonctionnalités avancées : La migration à chaud, les snapshots et la réplication garantissent une continuité de service même en cas de défaillance. 
+            Précision : Ces aspects sont cruciaux dans des environnements de production critiques et sont souvent mentionnés dans les comparatifs d’hyperviseurs publiés par TechTarget.
+          </li>
+        </ul>
+        <p>
+          Virtualisation du réseau
+        </p>
+        <p>
+          Elle transforme un réseau matériel en une infrastructure flexible et centralisée grâce à :
+        </p>
+        <ul>
+          <li>
+            NFV (Network Function Virtualization) : Virtualisation des fonctions réseau (routeurs, pare-feu, équilibreurs de charge) pour réduire la dépendance aux équipements physiques. 
+            Exemple : Plusieurs fournisseurs de services utilisent NFV pour migrer de systèmes propriétaires vers des solutions logicielles, comme expliqué dans des articles de 2ICS.net.
+          </li>
+          <li>
+            SDN (Software-Defined Networking) : Séparation des plans de contrôle et de données pour une gestion programmable du réseau. 
+            Lien utile : Des guides sur SDN montrent comment cette technologie permet de centraliser la configuration réseau pour une meilleure agilité.
+          </li>
+          <li>
+            VLANs (Virtual Local Area Networks) : Segmentation logique d’un réseau physique en plusieurs réseaux isolés.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- nouvelles technologies section -->
+  <section class="nouvelles_technologies_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Nouvelles Technologies
+        </h2>
+      </div>
+      <div class="nouvelles_technologies_container">
+        <ul>
+          <li>
+            Virtualisation des conteneurs (Docker, Kubernetes) : Environnements légers pour déployer rapidement des applications de façon isolée. 
+            Précision : Ces technologies sont au cœur du mouvement DevOps et de l’automatisation, comme en témoignent de nombreux tutoriels sur Kubernetes (<a href="https://cloud.theodo.com/blog/machines-virtuelles-docker" target="_blank">Cloud Theodo - Machines virtuelles Docker</a>).
+          </li>
+          <li>
+            Virtualisation GPU : Partage ou attribution directe de GPU aux VM pour améliorer les traitements graphiques et les applications d’IA. 
+            Exemple : Des fournisseurs cloud proposent désormais des instances GPU virtualisées pour le machine learning, comme détaillé dans le blog de Red Hat.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- footer section -->
-  <section class="footer_section">
+  <footer class="footer_section">
     <div class="container">
       <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        &copy; 2025 Mon Portfolio. Tous droits réservés.
       </p>
     </div>
-  </section>
-  <!-- footer section -->
+  </footer>
 
-  <!-- jQery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <!-- bootstrap js -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- custom js -->
-  <script type="text/javascript" src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
-
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
