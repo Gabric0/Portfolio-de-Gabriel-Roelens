@@ -540,30 +540,29 @@ a:focus {
   text-align: center;
 }
 
+/* Réglage spécifique pour l'élément img-box dans la section .why_section */
 .why_section .box .img-box {
   margin-bottom: 20px;
-  width: 120px;
-  height: 120px;
+  width: 120px;          /* Taille du cercle */
+  height: 120px;         /* Taille du cercle */
   min-width: 120px;
   min-height: 120px;
-  border-radius: 100%;
-  border: 5px solid #00204a;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  border-radius: 50%;    /* Forme circulaire */
+  border: 5px solid #00204a;  /* Bordure du cercle */
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;      /* Masque tout ce qui dépasse du cercle */
 }
 
+/* Réglages spécifiques pour l'image dans l'img-box */
 .why_section .box .img-box img {
-  width: 55px;
-  height: auto;
-  fill: #00204a;
+  width: 100%;            /* L'image prend toute la largeur du cercle */
+  height: 100%;           /* L'image prend toute la hauteur du cercle */
+  object-fit: cover;      /* Assure que l'image couvre le cercle sans déformation */
+  object-position: center; /* Centre l'image à l'intérieur du cercle */
 }
+
 
 .why_section .box h5 {
   font-weight: bold;
