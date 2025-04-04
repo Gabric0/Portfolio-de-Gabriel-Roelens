@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 
 <head>
@@ -13,24 +13,24 @@
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/favicon.png" type="">
 
-  <title> Mon Portfolio | Accueil </title>
+<title> Mon Portfolio | Accueil </title>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<!-- fonts style -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <!-- owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<!--owl slider stylesheet -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+<!-- font awesome style -->
+<link href="css/font-awesome.min.css" rel="stylesheet" />
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+<!-- Custom styles for this template -->
+<link href="css/style.css" rel="stylesheet" />
+<!-- responsive style -->
+<link href="css/responsive.css" rel="stylesheet" />
 
 </head>
 
@@ -90,12 +90,12 @@
   </header>
   <!-- end header section -->
 
-  <!-- slider section -->
+    <!-- slider section -->
 <section class="slider_section">
   <div id="customCarousel1" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-
-      <!-- Slide 1 : Mes Projets -->
+    
+      <!-- Slide 1 : Introduction -->
       <div class="carousel-item active">
         <div class="container">
           <div class="row">
@@ -115,35 +115,29 @@
           </div>
         </div>
       </div>
-
-      <!-- Slide 2 : TPs -->
+  
+      <!-- Slide 2 : Projet GPO -->
       <div class="carousel-item">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="detail-box">
-                <h1>TPs</h1>
-                <p>Voici les TP réalisés durant mon BTS SIO.</p>
-                <div class="btn-box">
-                  <input type="button" class="btn1" value="TP 01 : Réseau Local" onclick="window.location='./TP03_Reseau_Client-Serveur_v3roelens.pdf'">
-                  <input type="button" class="btn1" value="TP 02 : Config initiale" onclick="window.location='./Tps/TP2_Configuration_Parametres_initiaux_V2roelens_1.pdf'">
-                </div>
-                <div class="btn-box">
-                  <input type="button" class="btn1" value="TP 03 : VE" onclick="window.location='./Tps/TP3_VEroelens.pdf'">
-                  <input type="button" class="btn1" value="TP 04 : Réseau Client Serveur" onclick="window.location='./Tps/TP03_Reseau_Client-Serveur_v3roelens.pdf'">
-                </div>
+                <h1>Projet : AD</h1>
+                <p>Déploiement d'IPFire comme pare-feu avec règles de filtrage et DHCP, configuration d'Active Directory sous Windows Server, et installation des services LAMP, GLPI et NextCloud sur Linux.</p>
+                <!-- iframe pour afficher le PDF -->
+                <iframe src="docs/Fiche_E6_Projet2_GPO_Gabriel_Roelens.pdf" width="100%" height="400px"></iframe>
               </div>
             </div>
             <div class="col-md-6">
               <div class="img-box">
-                <img src="images/slider-img.png" alt="">
+                <img src="images/gpo_logo_thumb-removebg-preview.png" alt="">
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 3 : Projet GPO -->
+      <!-- Slide 3 : Projet Téléphonie -->
       <div class="carousel-item">
         <div class="container">
           <div class="row">
@@ -164,43 +158,68 @@
         </div>
       </div>
 
-      <!-- Slide 4 : Projet AD -->
+      <!-- Slide 4 : Projets BTS SIO -->
       <div class="carousel-item">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="detail-box">
-                <h1>Projet : AD</h1>
-                <p>Implémentation d'un Active Directory (AD) sous Windows Server.</p>
-                <!-- iframe pour afficher le PDF -->
-                <iframe src="docs/Fiche_E6_Projet_AD_Gabriel_Roelens.pdf" width="100%" height="400px"></iframe>
+                <h1>Projet : Téléphonie</h1>
+                <p>Déploiement d’une solution de téléphonie IP sécurisée avec Asterisk et IPFire.</p>
+                 <!-- iframe pour afficher le PDF -->
+                <iframe src="docs/Fiche_E6_Projet3_Telephonie_Gabriel_Roelens.pdf" width="100%" height="400px"></iframe>
               </div>
             </div>
             <div class="col-md-6">
               <div class="img-box">
-                <img src="images/ad_logo_thumb.png" alt="">
+                <img src="images/image_2025-04-03_235144111.png" alt="">
               </div>
             </div>
           </div>
         </div>
       </div>
+  <!-- Slide 5 : Projets BTS SIO (nouvelle) -->
+<div class="carousel-item">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="detail-box">
+          <h1>TPs</h1>
+          <p>Voici les TP réalisés durant mon BTS SIO.</p>
+          <div class="btn-box">
+            <input type="button" class="btn1" value="TP 05 : Réseau Étendu" onclick="window.location='./Tps/TP5_Reseau_Etendu.pdf'">
+            <input type="button" class="btn1" value="TP 06 : Sécurisation Initiale" onclick="window.location='./Tps/TP6_Securisation_Initiale.pdf'">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="img-box">
+          <img src="images/slider-img.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     </div>
 
-    <!-- Carousel indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-      <li data-target="#customCarousel1" data-slide-to="1"></li>
-      <li data-target="#customCarousel1" data-slide-to="2"></li>
-      <li data-target="#customCarousel1" data-slide-to="3"></li>
-    </ol>
+ <!-- Carousel indicators -->
+<ol class="carousel-indicators">
+  <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+  <li data-target="#customCarousel1" data-slide-to="1"></li>
+  <li data-target="#customCarousel1" data-slide-to="2"></li>
+  <li data-target="#customCarousel1" data-slide-to="3"></li>
+  <li data-target="#customCarousel1" data-slide-to="4"></li> <!-- Nouveau indicateur pour la slide 5 -->
+</ol>
 
   </div>
 </section>
-<!-- end slider section -->
+    <!-- end slider section -->
+  
 
-  <!-- info section -->
-  <section class="info_section layout_padding2">
+   <!-- info section -->
+
+   <section class="info_section layout_padding2">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-3 info_col">
@@ -244,11 +263,38 @@
             </a>
           </div>
         </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Liens
+            </h4>
+            <div class="info_links">
+              <a class="active" href="index.html">
+                Accueil
+              </a>
+              <a class="" href="apropos.html">
+                A propos de moi
+              </a>
+              <a class="" href="projets.html">
+                Projets
+              </a>
+              <a class="" href="stage.html">
+                Stages
+              </a>
+              <a class="" href="cv.html">
+                Mon CV
+              </a>
+              <a class="" href="veille.html">
+                Veille
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-<!-- end info section -->
+  <!-- end info section -->
 
   <!-- footer section -->
   <section class="footer_section">
@@ -273,6 +319,10 @@
   </script>
   <!-- custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
 
 </body>
 
